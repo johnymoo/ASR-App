@@ -1,0 +1,29 @@
+{
+  "name": "asr-eval-100",
+  "description": "100-sample dictation benchmark for Podcast ASR regression testing",
+  "audio_count": 100,
+  "dataset_audio_sha256": "01536be8c270483aa8c26894570c085acc530da144f6ce8a950cf890591f6bb6",
+  "baseline": {
+    "source": "dataset/baseline-nemotron-results.json",
+    "cases": 100,
+    "avg_token_error_rate": 0.120139,
+    "avg_latency_seconds": 0.1995
+  },
+  "checked_in_results": [
+    {
+      "path": "results/sensevoice-small-cuda-20260629/results.json",
+      "model": "SenseVoiceSmall",
+      "device": "cuda",
+      "cases": 100,
+      "ok_cases": 100,
+      "avg_token_error_rate": 0.148273,
+      "avg_latency_seconds": 0.15311,
+      "created_at": "2026-06-29T11:22:18"
+    }
+  ],
+  "comparison_image": "results/sensevoice-small-cuda-20260629/comparison.png",
+  "scripts": [
+    "scripts/eval_sensevoice_asr100.py",
+    "scripts/make_comparison_image.py"
+  ]
+}

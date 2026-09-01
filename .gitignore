@@ -1,0 +1,31 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime data and generated artifacts
+asr_tasks/
+meeting_tasks/
+meetings/
+podcast/
+static/
+output/
+*.log
+
+# Models and user-provided media
+models/
+modelscope-cache/
+*.mp3
+*.m4a
+*.mp4
+*.flac
+*.ogg
+*.wav
+
+# Keep the curated ASR benchmark fixtures versioned.
+!benchmarks/asr-eval-100/dataset/audio/*.wav

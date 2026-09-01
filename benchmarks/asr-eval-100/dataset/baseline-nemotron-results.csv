@@ -1,0 +1,101 @@
+id,category,voice,reference,raw_transcript,processed_transcript,token_error_rate,audio_seconds,latency_seconds
+cn_daily_01,中文日常,Tingting,今天下午三点半，我们在会议室二讨论产品原型。,"今天下午三点半, 我们在会议是二讨论产品圆形。",今天下午三点半，我们在会议是二讨论产品圆形。,0.1500,4.94,3.19
+cn_daily_02,中文日常,Tingting,请帮我记录一下，用户反馈主要集中在延迟和准确率。,"请帮我记录一下, 用户反馈主要集中在延时和准确率。",请帮我记录一下，用户反馈主要集中在延时和准确率。,0.0455,5.36,0.19
+cn_daily_03,中文日常,Tingting,我现在先把这段话输入到光标所在的位置。,我现在先把这段话输入到光所在的位置。,我现在先把这段话输入到光所在的位置。,0.0556,4.03,0.15
+cn_daily_04,中文日常,Tingting,这个功能需要稳定、快速，并且不要打断当前工作流。,"这个功能需要稳定快速, 并且不要打断当前工作流。",这个功能需要稳定快速，并且不要打断当前工作流。,0.0000,5.50,0.21
+cn_daily_05,中文日常,Tingting,如果快捷键没有响应，先检查辅助功能和输入监控权限。,"如果快节界没有响应, 先检查辅助功能和输入监控权限。",如果快节界没有响应，先检查辅助功能和输入监控权限。,0.0870,5.90,0.21
+cn_daily_06,中文日常,Tingting,今天的待办事项包括写报告、开会和回复客户邮件。,"今天的代办事项包括写报告, 开会和回复客户邮件。",今天的代办事项包括写报告，开会和回复客户邮件。,0.0476,5.35,0.19
+cn_daily_07,中文日常,Tingting,这句话比较短。,这句话比较短。,这句话比较短。,0.0000,1.40,0.16
+cn_daily_08,中文日常,Tingting,这是一段稍微长一点的中文测试，用来观察模型在连续语音里的断句能力。,"这是一段稍微长一点的中文测试, 用来观察模型再连续语音里的断剧能力。",这是一段稍微长一点的中文测试，用来观察模型再连续语音里的断剧能力。,0.0645,6.83,0.23
+cn_daily_09,中文日常,Tingting,请把明天上午十点到十一点留给设计评审。,请把明天上五十点到十一点留给设计评审。,请把明天上五十点到十一点留给设计评审。,0.0556,4.27,0.16
+cn_daily_10,中文日常,Tingting,我想用语音输入来减少切换窗口和手动打字的时间。,我想用于因输入来减少切换窗口和手动打字的时间。,我想用于因输入来减少切换窗口和手动打字的时间。,0.0909,5.07,0.19
+cn_punct_01,中文标点,Tingting,第一，先验证可行性；第二，再优化体验；第三，最后打包发布。,"第一, 先验证可行性。  第二, 在优化体验第三, 最后打包发布。",第一，先验证可行性。  第二，在优化体验第三，最后打包发布。,0.0435,6.94,0.23
+cn_punct_02,中文标点,Tingting,你觉得这个方案靠谱吗？如果靠谱，我们就继续推进。,"你觉得这个方案靠谱吗?  如果靠谱, 我们就继续推进。",你觉得这个方案靠谱吗？  如果靠谱，我们就继续推进。,0.0000,4.99,0.18
+cn_punct_03,中文标点,Tingting,注意：不要把临时测试数据提交到主分支。,注意不要把临时测试数据提交到主分支。,注意不要把临时测试数据提交到主分支。,0.0000,4.06,0.16
+cn_punct_04,中文标点,Tingting,我说的是输入法，不是普通的录音工具。,"我说的是输入法, 不是普通的录音工具。",我说的是输入法，不是普通的录音工具。,0.0000,3.52,0.15
+cn_punct_05,中文标点,Tingting,请输出三个部分：结论、证据和下一步建议。,"请输出三个部分结论, 证据和下一部建议。",请输出三个部分结论，证据和下一部建议。,0.0588,4.56,0.16
+en_daily_01,English daily,Samantha,Please schedule a follow up meeting for next Thursday morning.,Please schedule a follow up meeting for next Thursday morning.,Please schedule a follow up meeting for next Thursday morning.,0.0000,3.12,0.15
+en_daily_02,English daily,Samantha,"The prototype should feel fast, quiet, and reliable.","The prototype should feel fast, quiet, and reliable.","The prototype should feel fast, quiet, and reliable.",0.0000,3.44,0.14
+en_daily_03,English daily,Samantha,I am testing dictation inside a normal text editor.,I am testing dictation inside a normal text editor.,I am testing dictation inside a normal text editor.,0.0000,2.97,0.14
+en_daily_04,English daily,Samantha,Move the cursor to the end of the sentence and paste the transcript.,Move the cursor to the end of the sentence and paste the transcript.,Move the cursor to the end of the sentence and paste the transcript.,0.0000,3.37,0.15
+en_daily_05,English daily,Samantha,This is a short English sentence.,This is a short English sentence.,This is a short English sentence.,0.0000,1.81,0.11
+en_daily_06,English daily,Samantha,The system should not lose focus when recording starts.,The system should not lose focus when recording starts.,The system should not lose focus when recording starts.,0.0000,3.01,0.14
+en_daily_07,English daily,Samantha,We need better feedback when the microphone is active.,We need better feedback when the microphone is active.,We need better feedback when the microphone is active.,0.0000,2.66,0.14
+en_daily_08,English daily,Samantha,Dictation is useful when my hands are busy or tired.,Dictation is useful when my hands are busy or tired.,Dictation is useful when my hands are busy or tired.,0.0000,3.02,0.14
+en_daily_09,English daily,Samantha,Create a quick note and send it to the team channel.,Create a quick note and send it to the team channel.,Create a quick note and send it to the team channel.,0.0000,2.48,0.13
+en_daily_10,English daily,Samantha,The final result should appear exactly where the cursor was.,The final result should appear exactly where the cursor was.,The final result should appear exactly where the cursor was.,0.0000,3.19,0.15
+en_punct_01,English punctuation,Samantha,"First, validate the shortcut; second, record audio; third, insert text.",First validate the shortcut second record audio third insert text.,First validate the shortcut second record audio third insert text.,0.0000,5.74,0.21
+en_punct_02,English punctuation,Samantha,"Can you summarize the risk, the evidence, and the next step?","Can you summarize the risk, the evidence, and the next step?","Can you summarize the risk, the evidence, and the next step？",0.0000,3.59,0.15
+en_punct_03,English punctuation,Samantha,Do not overwrite the clipboard unless dictation succeeds.,Do not override the clipboard unless dictation succeeds,Do not override the clipboard unless dictation succeeds,0.1250,3.28,0.15
+en_punct_04,English punctuation,Samantha,"The answer is yes, but only after we verify the logs.","The answer is yes, but only after we verified the logs.","The answer is yes, but only after we verified the logs.",0.0909,3.47,0.16
+en_punct_05,English punctuation,Samantha,"Use a calm tone, keep it brief, and avoid jargon.","Use a calm tone, keep it brief, and avoid jargon.","Use a calm tone, keep it brief, and avoid jargon.",0.0000,3.38,0.15
+mixed_01,中英混合,Tingting,这个 app 的名字叫 Nemotron Dictation。,这个 AP 的名字叫 NAMT。,这个 AP 的名字叫 NAMT。,0.3333,2.81,0.13
+mixed_02,中英混合,Tingting,请把 ASR backend 切换到 mlx-community 的模型。,请把 ASR backend切换到 MLX community的模型。,请把 ASR backend切换到 MLX community的模型。,0.1818,6.30,0.21
+mixed_03,中英混合,Tingting,我们需要测试 ChatGPT、Claude 和 Gemini 这些名字。,我们需要测试 ChatGPT CLO 和 Jamena 这些名字。,我们需要测试 ChatGPT CLO 和 Jamena 这些名字。,0.2308,5.63,0.20
+mixed_04,中英混合,Tingting,今天要 review PR，然后更新 README。,"今天要 Review PR, 然后更新 Red。",今天要 Review PR，然后更新 Red。,0.1000,4.03,0.16
+mixed_05,中英混合,Tingting,把 command V 改成模拟粘贴到当前 cursor。,改成模拟粘贴到当前科色。,改成模拟粘贴到当前科色。,0.3846,3.61,0.14
+mixed_06,中英混合,Tingting,这个 feature 先不要做 cloud sync。,这个 fet先不要做 Cloud Sink.,这个 fet先不要做 Cloud Sink.,0.2222,2.62,0.13
+mixed_07,中英混合,Tingting,我想比较 Whisper large v3 turbo 和 Nemotron ASR。,我想比较 WSFL 和 Namatran ASR。,我想比较 WSFL 和 Namatran ASR。,0.4545,4.97,0.17
+mixed_08,中英混合,Tingting,如果 input monitoring 没开，global shortcut 会失败。,"如果 Input monitoring没开, Global Shortcu。",如果 Input monitoring没开，Global Shortcu。,0.3636,4.51,0.17
+mixed_09,中英混合,Tingting,把 output format 设成 markdown list。,Output format 设成 markdown list.,Output format 设成 markdown list.,0.1429,3.02,0.14
+mixed_10,中英混合,Tingting,这个 bug 可能和 Accessibility permission 有关。,这个可能和 XSBLT permi。,这个可能和 XSBLT permi。,0.5000,3.69,0.14
+mixed_11,中英混合,Samantha,Please test 中文 mixed with English words in one sentence.,Please test mixed with English words in one sentence.,Please test mixed with English words in one sentence.,0.1818,2.81,0.15
+mixed_12,中英混合,Samantha,"The model should handle Nemotron, Juno, and voice input correctly.","The model should handle nemotron juno, and voice input correctly.","The model should handle nemotron juno, and voice input correctly.",0.0000,3.98,0.17
+mixed_13,中英混合,Samantha,"I said 会议纪要, not meeting medicine.",I said not meeting medicine.,I said not meeting medicine.,0.4444,1.90,0.10
+mixed_14,中英混合,Samantha,The shortcut key is right Option on macOS.,The shortcut key is right option on Mac OS.,The shortcut key is right option on Mac OS.,0.2500,2.64,0.13
+mixed_15,中英混合,Samantha,Please paste the transcript into TextEdit.,Please paste the transcript into text edit.,Please paste the transcript into text edit.,0.3333,2.38,0.11
+numbers_01,数字日期,Tingting,订单号是一二三四五六，金额是九十九点八元。,"订单好是一二三四五六, 金额是九十九点八元。",订单好是一二三四五六，金额是九十九点八元。,0.0526,4.64,0.16
+numbers_02,数字日期,Tingting,会议时间是二零二六年六月二十八日下午四点十五分。,会议时间是 2026 年 6 月 28 日下午 4 .  15 分。,会议时间是 2026 年 6 月 28 日下午 4 .  15 分。,0.5217,4.99,0.18
+numbers_03,数字日期,Tingting,我的手机号是 一三八 零零一三 八零零零。,我的手机号是 1380013800。,我的手机号是 1380013800。,0.6471,3.70,0.15
+numbers_04,数字日期,Tingting,版本号从零点一升级到零点二。,版本号从零点一升级到零点二。,版本号从零点一升级到零点二。,0.0000,3.00,0.13
+numbers_05,数字日期,Tingting,这个测试一共包含一百个句子。,这个测试一共包含一百个句子。,这个测试一共包含一百个句子。,0.0000,2.56,0.13
+numbers_06,数字日期,Samantha,The build number is one zero four seven.,The build number is one zero four seven.,The build number is one zero four seven.,0.0000,2.17,0.11
+numbers_07,数字日期,Samantha,Set the timer for twenty five minutes and thirty seconds.,Set the timer for twenty five minutes and thirty seconds.,Set the timer for twenty five minutes and thirty seconds.,0.0000,3.04,0.15
+numbers_08,数字日期,Samantha,The price is ninety nine dollars and eighty cents.,The price is ninety nine dollars eighty cents.,The price is ninety nine dollars eighty cents.,0.1111,2.62,0.12
+numbers_09,数字日期,Samantha,The meeting starts at four fifteen PM on June twenty eighth.,The meeting starts at four fifteen PM on June twenty eighth.,The meeting starts at four fifteen PM on June twenty eighth.,0.0000,3.32,0.15
+numbers_10,数字日期,Samantha,"Create three tasks, two reminders, and one follow up note.",Create three tasks to reminders and one follow up note.,Create three tasks to reminders and one follow up note.,0.1000,4.02,0.16
+code_01,代码命令,Samantha,"Run git status, then run python minus m unittest.",Rungit status then run Python MUNTET.,Rungit status then run Python MUNTET.,0.5556,3.34,0.15
+code_02,代码命令,Samantha,Open src slash nemotron underscore asr slash menubar dot py.,OpenSRC slash Nemotron underscore ASR menubar Pi,OpenSRC slash Nemotron underscore ASR menubar Pi,0.5000,4.49,0.18
+code_03,代码命令,Samantha,Set the environment variable PYTHONPATH equals src.,Said the environment variable Pythonpath equals SRC.,Said the environment variable Pythonpath equals SRC.,0.1429,3.42,0.16
+code_04,代码命令,Samantha,The function name is stop underscore and underscore transcribe.,The function name is stop underscore and underscore transcribe.,The function name is stop underscore and underscore transcribe.,0.0000,3.26,0.14
+code_05,代码命令,Samantha,Use command V to paste text at the current cursor.,Use command V to paste text at the current cursor.,Use command V to paste text at the current cursor.,0.0000,2.81,0.14
+code_06,代码命令,Tingting,运行 git status，然后检查 tests 目录。,"运行 GST status, 然后检查 Test目录。",运行 GST status，然后检查 Test目录。,0.1818,3.56,0.14
+code_07,代码命令,Tingting,文件路径是 src slash nemotron underscore asr slash shortcut dot py。,文件路径是 SRC slasen underscore ASR slash shortcut dot Pi.,文件路径是 SRC slasen underscore ASR slash shortcut dot Pi.,0.2143,8.18,0.26
+code_08,代码命令,Tingting,请执行 python minus m unittest discover。,请执行 PUNTS Discover.,请执行 PUNTS Discover.,0.5000,3.52,0.14
+code_09,代码命令,Tingting,函数名是 toggle from shortcut。,函数名是 toggle from shortcut.,函数名是 toggle from shortcut.,0.0000,2.54,0.13
+code_10,代码命令,Tingting,把日志写到 Library slash Logs slash Nemotron Dictation dot log。,把日子写到 Library slash Luxe。,把日子写到 Library slash Luxe。,0.5385,5.22,0.19
+names_01,专有名词,Tingting,NVIDIA Nemotron ASR 是这次测试的目标模型。,NASR 是这次测试的目标模型。,NASR 是这次测试的目标模型。,0.2308,7.35,0.21
+names_02,专有名词,Tingting,Juno 是一个语音输入产品。,Que no是一个语音输入产品。,Que no是一个语音输入产品。,0.2000,2.32,0.11
+names_03,专有名词,Tingting,MLX 在 Apple Silicon 上运行速度很重要。,MLX 在 Apple Chund。,MLX 在 Apple Chund。,0.7500,4.68,0.15
+names_04,专有名词,Tingting,Hugging Face 上的模型名称很长。,Hugging face上的模型名称很长。,Hugging face上的模型名称很长。,0.0000,2.82,0.12
+names_05,专有名词,Tingting,OpenAI API 和本地 ASR 可以组合使用。,ओपन आई API 和本地 ASR 可以组合使用。,ओपन आई API 和本地 ASR 可以组合使用。,0.1667,5.81,0.18
+names_06,专有名词,Samantha,NVIDIA Nemotron ASR should run through the MLX audio backend.,Nvidia nemotron ASR should run through the MLX audio backend.,Nvidia nemotron ASR should run through the MLX audio backend.,0.0000,3.96,0.17
+names_07,专有名词,Samantha,The model name is mlx community slash whisper large v three turbo.,The model name is MLX community slash Whisper Large V three turbo.,The model name is MLX community slash Whisper Large V three turbo.,0.0000,3.94,0.18
+names_08,专有名词,Samantha,"We compared Juno, Wispr Flow, and native dictation.",We compared Juno Whisper Flow and native dictation.,We compared Juno Whisper Flow and native dictation.,0.1250,3.55,0.17
+names_09,专有名词,Samantha,Apple Silicon can run local speech models efficiently.,Apple silicon can run local speech models efficiently.,Apple silicon can run local speech models efficiently.,0.0000,3.21,0.17
+names_10,专有名词,Samantha,Hugging Face downloads should be cached before the demo.,Hugging face downloads should be cached before the demo.,Hugging face downloads should be cached before the demo.,0.0000,2.91,0.15
+long_01,长句,Tingting,如果这个输入法要长期使用，它必须在权限、录音、转写、粘贴和错误恢复这些环节都足够稳定。,"如果这个输入法要长期使用, 他必须在权限录音、转写、粘贴和错误恢复这些环节都足够稳定",如果这个输入法要长期使用，他必须在权限录音、转写、粘贴和错误恢复这些环节都足够稳定,0.0263,10.00,0.33
+long_02,长句,Tingting,我希望它像普通输入法一样安静地工作，而不是每次都弹出窗口或者打断当前任务。,"我希望他向普通输入法一样安静地工作, 而不是每次都淡出窗口或者打断当前任务。",我希望他向普通输入法一样安静地工作，而不是每次都淡出窗口或者打断当前任务。,0.0857,8.15,0.30
+long_03,长句,Tingting,当用户快速连续按下快捷键时，系统应该只触发一次开始或者停止，避免状态机混乱。,"当用户快速连续按下快捷键时, 系统应该之触发一次开始或者停止, 避免状态机混乱。",当用户快速连续按下快捷键时，系统应该之触发一次开始或者停止，避免状态机混乱。,0.0286,8.90,0.31
+long_04,长句,Tingting,对于中英混合内容，模型需要正确保留英文品牌名、技术名词和中文标点。,"对于中英混合内容, 模型需要正确保留英文品牌名, 技术名词和中文标点。",对于中英混合内容，模型需要正确保留英文品牌名，技术名词和中文标点。,0.0000,7.63,0.26
+long_05,长句,Tingting,如果转写失败，应用应该恢复剪贴板并给出明确错误，而不是默默丢失内容。,"如果转写失败, 应用应该恢复剪贴板, 并给出明确错误, 而不是默默丢失内容。",如果转写失败，应用应该恢复剪贴板，并给出明确错误，而不是默默丢失内容。,0.0000,7.80,0.27
+long_06,长句,Samantha,"A production dictation app needs reliable shortcuts, clear recording feedback, fast transcription, and safe text insertion.","A production dictation app needs reliable shortcuts, clear recording feedback, fast transcription, and safe text insertion.","A production dictation app needs reliable shortcuts, clear recording feedback, fast transcription, and safe text insertion.",0.0000,7.88,0.28
+long_07,长句,Samantha,"When the user speaks a mixed technical sentence, the system should preserve product names and code-like tokens.","When the user speaks a mixed technical sentence, the system should preserve product names and code like tokens.","When the user speaks a mixed technical sentence, the system should preserve product names and code like tokens.",0.1176,6.00,0.23
+long_08,长句,Samantha,"The evaluation should separate model accuracy from microphone capture, shortcut handling, and paste behavior.","The evaluation should separate model accuracy from microphone capture, shortcut handling, and paste behavior.","The evaluation should separate model accuracy from microphone capture, shortcut handling, and paste behavior.",0.0000,6.60,0.24
+long_09,长句,Samantha,"If permissions change after packaging, the app should detect the problem and show a useful recovery action.","If permissions change after packaging, the app should detect the problem and show a useful recovery action.","If permissions change after packaging, the app should detect the problem and show a useful recovery action.",0.0000,5.84,0.22
+long_10,长句,Samantha,The current prototype is good enough for feasibility testing but still needs better product polish.,"The current prototype is good enough for feasibility testing, but still needs better product polish.","The current prototype is good enough for feasibility testing, but still needs better product polish.",0.0000,5.10,0.21
+edge_01,边界场景,Tingting,嗯，这个地方先暂停一下，然后继续说下一句。,"N 这个地方先暂停一下, 然后继续说下一举。",N 这个地方先暂停一下，然后继续说下一举。,0.1111,4.61,0.17
+edge_02,边界场景,Tingting,重复重复重复，这是一段重复词测试。,"重复重复重复, 这是一段重复慈测史。",重复重复重复，这是一段重复慈测史。,0.1333,3.93,0.15
+edge_03,边界场景,Tingting,请不要把空格插到中文句子的中间。,请不要把控格插到中文句子的中间。,请不要把控格插到中文句子的中间。,0.0667,3.26,0.14
+edge_04,边界场景,Tingting,弱网环境下，最好也能保存本地音频。,"若往环境下, 最好也能保存本地音频。",弱网环境下，最好也能保存本地音频。,0.0000,3.95,0.16
+edge_05,边界场景,Tingting,这句话包含括号，左括号测试内容右括号。,"这句话包含过号, 左扩号测试内容又破号",这句话包含过号，左扩号测试内容又破号,0.2353,4.40,0.16
+edge_06,边界场景,Samantha,"Uh, let me pause for a second and then continue.","Ah, let me pause for a second and then continue.","Ah, let me pause for a second and then continue.",0.1000,2.76,0.13
+edge_07,边界场景,Samantha,"Repeat repeat repeat, this is a repetition test.","Repeat, repeat, repeat.  This is a repetition test.","Repeat, repeat, repeat.  This is a repetition test.",0.0000,3.13,0.15
+edge_08,边界场景,Samantha,"Please keep commas, periods, and question marks in reasonable places.",Please keep comments periods and question marks in reasonable places.,Please keep comments periods and question marks in reasonable places.,0.1000,4.38,0.18
+edge_09,边界场景,Samantha,Do not insert random spaces into product names.,Do not insert random spaces into product names.,Do not insert random spaces into product names.,0.0000,2.92,0.15
+edge_10,边界场景,Samantha,"This sentence contains parentheses, left parenthesis test content right parenthesis.",This sentence contains parentheses left parenthesis test content right parenthesis.,This sentence contains parentheses left parenthesis test content right parenthesis.,0.0000,5.15,0.21
+input_01,输入法操作,Tingting,选中上一段文字，然后用新的语音输入覆盖它。,"旋种上一段文字, 然后用新的语音输入覆盖他。",旋种上一段文字，然后用新的语音输入覆盖他。,0.1579,4.60,0.17
+input_02,输入法操作,Tingting,在当前光标后面插入一行新的会议纪要。,在当前光飙后面插入一行新的会议既要。,在当前光飙后面插入一行新的会议既要。,0.1176,3.89,0.16
+input_03,输入法操作,Tingting,请不要删除我剪贴板里原来的内容。,请不要删除我剪贴版里原来的内容。,请不要删除我剪贴版里原来的内容。,0.0667,3.31,0.14
+input_04,输入法操作,Samantha,Insert this sentence after the current cursor without changing the selection.,Insert the sentence after the current cursor without changing the selection.,Insert the sentence after the current cursor without changing the selection.,0.0909,3.93,0.17
+input_05,输入法操作,Samantha,"If the target app is not focused, cancel the paste and show an error.","If the target app is not focused, cancel the paste and show an error.","If the target app is not focused, cancel the paste and show an error.",0.0000,3.91,0.16

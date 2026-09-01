@@ -1,0 +1,33 @@
+services:
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${PODCAST_ASR_IMAGE:-x570-podcast-asr:1.0.0}
+    container_name: x570-podcast-asr
+    restart: unless-stopped
+    cpus: 8
+    mem_limit: 8g
+    ports:
+      - "${ASR_BIND_HOST:-127.0.0.1}:${ASR_PORT:-18021}:18021"
+    environment:
+      ASR_DEVICE: cpu
+      ASR_CPU_THREADS: "8"
+      ASR_MAX_UPLOAD_BYTES: "268435456"
+      ASR_FP16: "0"
+      SENSEVOICE_MODEL_DIR: /models/SenseVoiceSmall
+      SENSEVOICE_VAD_MODEL_DIR: /models/speech_fsmn_vad
+      SENSEVOICE_SPEAKER_MODEL_DIR: /cache/modelscope/models/iic/speech_campplus_sv_zh-cn_16k-common
+      HF_HUB_OFFLINE: "1"
+      MODELSCOPE_CACHE: /cache/modelscope
+      OMP_NUM_THREADS: "8"
+    volumes:
+      - ${SENSEVOICE_MODEL_DIR_HOST:-./models/SenseVoiceSmall}:/models/SenseVoiceSmall:ro
+      - ${SENSEVOICE_VAD_MODEL_DIR_HOST:-./models/speech_fsmn_vad}:/models/speech_fsmn_vad:ro
+      - ${MODELSCOPE_CACHE_HOST:-./cache}:/cache
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:18021/readyz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
