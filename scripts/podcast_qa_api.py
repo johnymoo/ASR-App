@@ -497,6 +497,14 @@ def _session_history(session: dict[str, Any], limit: int = 8) -> list[dict[str, 
     return history
 
 
+def _history_for_task(session: dict[str, Any], task: dict[str, Any]) -> list[dict[str, str]]:
+    if session.get("scope") and session.get("scope") != task.get("scope"):
+        return []
+    if task.get("scope") == "episode" and session.get("episode_id") != task.get("episode_id"):
+        return []
+    return _session_history(session)
+
+
 def _retrieval_query(question: str, history: list[dict[str, str]]) -> str:
     previous_answer = next(
         (item["content"] for item in reversed(history) if item.get("role") == "assistant"),
@@ -508,7 +516,7 @@ def _retrieval_query(question: str, history: list[dict[str, str]]) -> str:
 def answer_question(task: dict[str, Any], session: dict[str, Any]) -> dict[str, Any]:
     config = load_config()
     question = str(task["question"])
-    history = _session_history(session)
+    history = _history_for_task(session, task)
     retrieval_queries = [question]
     resolved_query = _retrieval_query(question, history)
     if resolved_query != question:

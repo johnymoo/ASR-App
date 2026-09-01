@@ -145,6 +145,23 @@ class PodcastQaTests(unittest.TestCase):
         self.assertNotIn("推荐", query)
         self.assertTrue(any("并不是特别好读" in item["text"] for item in results[:5]))
 
+    def test_scope_change_keeps_session_but_resets_model_history(self) -> None:
+        session = {
+            "scope": "episode",
+            "episode_id": "odyssey123456",
+            "messages": [
+                {"role": "user", "content": "推荐了哪本书？"},
+                {"role": "assistant", "content": "《千面英雄》"},
+            ],
+        }
+
+        history = podcast_qa_api._history_for_task(
+            session, {"scope": "all", "episode_id": None}
+        )
+
+        self.assertEqual([], history)
+        self.assertEqual(2, len(session["messages"]))
+
     def test_public_config_masks_api_key(self) -> None:
         public = podcast_qa_api.public_config(
             {

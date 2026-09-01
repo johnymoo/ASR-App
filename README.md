@@ -131,6 +131,9 @@ The podcast index and every episode report include an Agent conversation panel.
 Users can switch between one episode and the complete published library, ask
 follow-up questions in the same session, refresh or change pages while a task is
 running, and open each citation at the corresponding transcript chunk.
+Follow-ups inherit recent history while the scope is unchanged. Changing the
+scope or selected episode keeps the visible conversation but starts clean model
+context so evidence from the previous scope cannot leak into the new answer.
 
 The Agent uses an OpenAI-compatible `/chat/completions` endpoint. Its single
 active configuration is editable at:
