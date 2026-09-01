@@ -57,6 +57,15 @@ class PublishSiteTests(unittest.TestCase):
         self.assertIn('/api/podcast-asr/qa/config', html)
         self.assertNotIn('value="sk-', html)
 
+    def test_agent_enter_to_send_and_new_conversation_contract(self) -> None:
+        html = publish_podcast_asr_site.render_site_index([])
+
+        self.assertIn("event.key!=='Enter'||event.shiftKey||event.isComposing", html)
+        self.assertIn("form.requestSubmit()", html)
+        self.assertIn("data-qa-new>新对话</button>", html)
+        self.assertIn("conversationEpoch++", html)
+        self.assertIn("if(epoch!==conversationEpoch)return", html)
+
 
 if __name__ == "__main__":
     unittest.main()
