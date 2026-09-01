@@ -38,6 +38,25 @@ class PublishSiteTests(unittest.TestCase):
         self.assertIn("const wasActive=activeTask===task.job_id", html)
         self.assertIn("reportIsReady(task)", html)
 
+    def test_index_exposes_global_agent_qa_and_settings(self) -> None:
+        html = publish_podcast_asr_site.render_site_index(
+            [{"episode_id": "odyssey123456", "title": "Odyssey", "published_time": "2026-09-01"}]
+        )
+
+        self.assertEqual(1, html.count('id="podcastQa"'))
+        self.assertIn('data-default-scope="all"', html)
+        self.assertIn('data-qa-scope="episode"', html)
+        self.assertIn('data-qa-scope="all"', html)
+        self.assertIn('/api/podcast-asr/qa/questions', html)
+        self.assertIn('/static/podcast-asr/settings/index.html', html)
+
+    def test_settings_page_never_contains_an_api_key_value(self) -> None:
+        html = publish_podcast_asr_site.render_settings_page()
+
+        self.assertIn('name="api_key"', html)
+        self.assertIn('/api/podcast-asr/qa/config', html)
+        self.assertNotIn('value="sk-', html)
+
 
 if __name__ == "__main__":
     unittest.main()
