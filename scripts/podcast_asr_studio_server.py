@@ -21,14 +21,16 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 from podcast_asr_task_api import router as podcast_router  # noqa: E402
 from meeting_asr_task_api import router as meeting_router  # noqa: E402
+from podcast_qa_api import router as podcast_qa_router  # noqa: E402
 
 STATIC_ROOT = Path(os.environ.get("SENSEVOICE_STATIC_ROOT", "~/deployments/sensevoice/static")).expanduser()
 PODCAST_INDEX = STATIC_ROOT / "podcast-asr" / "index.html"
 MEETING_INDEX = STATIC_ROOT / "meeting-asr" / "index.html"
 
-app = FastAPI(title="Podcast ASR Studio", version="1.1.0")
+app = FastAPI(title="Podcast ASR Studio", version="1.2.0")
 app.include_router(podcast_router)
 app.include_router(meeting_router)
+app.include_router(podcast_qa_router)
 
 
 @app.middleware("http")

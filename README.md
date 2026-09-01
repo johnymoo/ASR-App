@@ -14,6 +14,7 @@ End-to-end pipeline for turning a Xiaoyuzhou episode into GPU SenseVoice ASR art
 8. Publish per-episode report pages and an index under a static web root.
 9. Export the final LLM summary into an LLM Wiki (`WIKI_PATH`) for long-term knowledge reuse.
 10. Optionally expose a FastAPI background-task API so the website import form keeps running after users leave the page.
+11. Ask follow-up questions against one episode or the complete library through a configurable OpenAI-compatible Agent, with transcript citations.
 
 ## Files
 
@@ -30,6 +31,7 @@ End-to-end pipeline for turning a Xiaoyuzhou episode into GPU SenseVoice ASR art
 | `scripts/meeting_asr_task_api.py` | Persistent MP3/WAV meeting-upload task API. |
 | `scripts/meeting_asr_pipeline.py` | Meeting task client and speaker-labelled TXT formatter. |
 | `scripts/podcast_asr_studio_server.py` | Podcast and meeting API/static-site gateway. |
+| `scripts/podcast_qa_api.py` | Agent configuration, retrieval, persistent conversations, and asynchronous podcast Q&A API. |
 | `services/x570-asr/` | CPU SenseVoice worker, CAM++ diarization endpoint, and Compose deployment. |
 | `web/meeting-asr/index.html` | Mobile-capable meeting upload, polling, transcript, and download UI. |
 | `scripts/publish_podcast_asr_site_watchdog.sh` | Silent watchdog wrapper for cron/no-agent jobs. |
@@ -46,6 +48,12 @@ End-to-end pipeline for turning a Xiaoyuzhou episode into GPU SenseVoice ASR art
 - Optional local vLLM/OpenAI-compatible endpoint for summary generation
 - FastAPI, Uvicorn, python-multipart, and Requests for the Studio gateway
 - Docker Compose for the isolated x570 CPU worker
+
+Install the Studio gateway dependencies with:
+
+```bash
+python3.12 -m pip install -r requirements-gateway.txt
+```
 
 ## Configuration
 
@@ -72,6 +80,12 @@ The scripts default to local paths, but all environment-specific values are conf
 | `MEETING_ROOT` | `~/meetings` |
 | `MEETING_PIPELINE` | script beside `meeting_asr_task_api.py` |
 | `MEETING_ASR_ENDPOINT` | `http://127.0.0.1:18021/v1/audio/meeting-transcriptions` |
+| `PODCAST_QA_API_BASE` | `http://127.0.0.1:8004/v1` |
+| `PODCAST_QA_API_KEY` | empty; optional for local APIs |
+| `PODCAST_QA_MODEL` | `qwen3.6-35b-fp8` |
+| `PODCAST_QA_TEMPERATURE` | `0.1` |
+| `PODCAST_QA_TIMEOUT_SECONDS` | `180` |
+| `PODCAST_QA_ROOT` | `$PODCAST_ROOT/qa` |
 | `IMAGE2_MODEL` | `gpt-image-2` |
 | `IMAGE2_API_KEY` / `OPENAI_API_KEY` | required for native GPT Image2 TLDR image generation |
 | `IMAGE2_BASE_URL` / `OPENAI_BASE_URL` | optional OpenAI-compatible image endpoint |
@@ -110,6 +124,35 @@ GET  /api/podcast-asr/tasks/by-episode/{episode_id}
 ```
 
 Because the job is server-side and state is persisted, users may leave or close the website after submitting a Xiaoyuzhou URL. When they return, the front-end restores the last active task from `localStorage`, polls the API, and shows a persistent task panel instead of relying on an auto-dismissing toast.
+
+## Podcast Agent Q&A
+
+The podcast index and every episode report include an Agent conversation panel.
+Users can switch between one episode and the complete published library, ask
+follow-up questions in the same session, refresh or change pages while a task is
+running, and open each citation at the corresponding transcript chunk.
+
+The Agent uses an OpenAI-compatible `/chat/completions` endpoint. Its single
+active configuration is editable at:
+
+```text
+/static/podcast-asr/settings/index.html
+```
+
+The API key is stored only in the private server-side config file and is masked
+by the GET endpoint. This single-user LAN MVP intentionally has no login gate.
+Question context is limited to relevant structured summaries, official outlines,
+and overlapping transcript windows. Transcript timestamps are approximate
+because the current ASR pipeline interpolates sentence timing inside each
+five-minute chunk.
+
+```text
+GET  /api/podcast-asr/qa/config
+PUT  /api/podcast-asr/qa/config
+POST /api/podcast-asr/qa/questions
+GET  /api/podcast-asr/qa/questions/{task_id}
+GET  /api/podcast-asr/qa/sessions/{session_id}
+```
 
 To mount the router in an existing FastAPI app:
 
